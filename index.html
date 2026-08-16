@@ -521,7 +521,7 @@
           <button class="category-dropdown-close" onclick="closeCategoryMenu()">×</button>
           <span class="category-dropdown-title">Kategorier</span>
           <button class="cat-btn active" onclick="filterCategory('all', this)">Populära</button>
-          <button class="cat-btn" onclick="filterCategory('iphone', this)">iPhone Skal</button>
+          <button class="cat-btn" onclick="filterCategory('iphone', this)">Äkta läder Skal</button>
           <button class="cat-btn" onclick="filterCategory('magsafe', this)">MagSafe Korthållare</button>
           <button class="cat-btn" onclick="filterCategory('airpods', this)">AirPods Skal</button>
           <button class="cat-btn" onclick="filterCategory('screen', this)">Skärmskydd</button>
@@ -576,7 +576,7 @@
     </div>
     <div class="mobile-cat-chips">
       <button class="mobile-cat-chip active" data-cat="all" onclick="filterCategory('all')">Populära</button>
-      <button class="mobile-cat-chip" data-cat="iphone" onclick="filterCategory('iphone')">iPhone</button>
+      <button class="mobile-cat-chip" data-cat="iphone" onclick="filterCategory('iphone')">Äkta Läder Skal</button>
       <button class="mobile-cat-chip" data-cat="magsafe" onclick="filterCategory('magsafe')">MagSafe Korthållare</button>
       <button class="mobile-cat-chip" data-cat="airpods" onclick="filterCategory('airpods')">AirPods</button>
       <button class="mobile-cat-chip" data-cat="screen" onclick="filterCategory('screen')">Skärm</button>
@@ -788,7 +788,7 @@
       <div class="footer-col">
         <h5>Shoppa</h5>
         <ul>
-          <li><a onclick="filterCategory('iphone', document.querySelector('.cat-btn'))">iPhone Skal</a></li>
+          <li><a onclick="filterCategory('iphone', document.querySelector('.cat-btn'))">Äkta Läder Skal</a></li>
           <li><a onclick="filterCategory('wallet', document.querySelector('.cat-btn'))">Plånböcker</a></li>
           <li><a onclick="filterCategory('magsafe', document.querySelector('.cat-btn'))">MagSafe Korthållare</a></li>
           <li><a onclick="filterCategory('airpods', document.querySelector('.cat-btn'))">AirPods Skal</a></li>
@@ -859,31 +859,25 @@
     // ===== PRODUCT DATA =====
     const allProducts = [
       // 1. iPhone Skal (3 products)
-      { id: 1, name: "iPhone Skal — MagSafe Läder", price: 499, image: "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000"], category: "iphone", colors: ["Svart", "Brun"], desc: "Slitstarkt skal i äkta kohudsläder med inbyggd MagSafe. Perfekt passform och premium känsla.", hasVariants: true },
-      { id: 2, name: "iPhone Skal Pro — MagSafe", price: 599, image: "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000"], category: "iphone", colors: ["Svart", "Brun"], desc: "Förstärkt skydd med stötabsorberande kärna. MagSafe-kompatibelt. Äkta läder.", hasVariants: true },
-      { id: 3, name: "iPhone Skal Slim — MagSafe", price: 449, image: "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000"], category: "iphone", colors: ["Svart", "Brun"], desc: "Ultra-slimmat designat skal som inte kompromissar med skyddet. MagSafe.", hasVariants: true },
+      { id: 1, name: "Äkta Läder Skal — MagSafe", price: 499, image: "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000", "https://drive.google.com/thumbnail?id=1pjkd4nXLC_rjTctQ9ydloKbc46ACUMDi&sz=w1000"], category: "iphone", colors: ["Svart", "Brun"], desc: "Slitstarkt skal i äkta kohudsläder med inbyggd MagSafe. Perfekt passform och premium känsla.", hasVariants: true },
 
       // 2. Skärmskydd (3 products)
       { id: 4, name: "Skärmskydd — Härdat Glas", price: 199, image: "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000"], category: "screen", colors: ["Svart", "Brun"], desc: "9H härdat glas med oleofob beläggning. Kantskydd och bubbelfri applicering.", hasVariants: false },
       { id: 5, name: "Skärmskydd — Privacy", price: 249, image: "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", images: ["https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000", "https://drive.google.com/thumbnail?id=1-6FuKcLzv5GiEfOMZf_ybuCHdNauRfXq&sz=w1000"], category: "screen", colors: ["Svart", "Brun"], desc: "Privacy-filter som skyddar din skärm från sidovy. Härdat glas av högsta kvalitet.", hasVariants: false },
 
       // 3. MagSafe Korthållare (3 products)
-      { id: 7, name: "MagSafe Korthållare — Slim", price: 299, image: "https://i.imgur.com/PkVg5dx.png", images: ["https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png"], category: "magsafe", colors: ["Svart", "Brun"], desc: "Plats för upp till 3 kort. Stark magnetisk fästning. Äkta läder.", hasVariants: false },
-      { id: 8, name: "MagSafe Korthållare — Pro", price: 349, image: "https://i.imgur.com/PkVg5dx.png", images: ["https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png"], category: "magsafe", colors: ["Svart", "Brun"], desc: "Premium korthållare med RFID-skydd. Plats för 4 kort och kontanter.", hasVariants: false },
-      { id: 9, name: "MagSafe Korthållare — Pop", price: 279, image: "https://i.imgur.com/PkVg5dx.png", images: ["https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png"], category: "magsafe", colors: ["Svart", "Brun"], desc: "Kompatibel med MagSafe PopSocket. Praktisk och stilren design.", hasVariants: false },
+      { id: 8, name: "MagSafe Korthållare - Äkta Läder", price: 349, image: "https://i.imgur.com/PkVg5dx.png", images: ["https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png", "https://i.imgur.com/PkVg5dx.png"], category: "magsafe", colors: ["Svart", "Brun"], desc: "Premium korthållare med RFID-skydd. Plats för 4 kort och kontanter.", hasVariants: false },
 
       // 4. AirPods Skal (3 products)
-      { id: 10, name: "AirPods Skal — Läder", price: 349, image: "https://i.imgur.com/lniCCs9.png", images: ["https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png"], category: "airpods", colors: ["Svart", "Brun"], desc: "Äkta kohudsläder. Exakt passform. Laddningskompatibelt.", hasVariants: false },
-      { id: 11, name: "AirPods Pro Skal — Läder", price: 379, image: "https://i.imgur.com/lniCCs9.png", images: ["https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png"], category: "airpods", colors: ["Svart", "Brun"], desc: "Perfekt passform för AirPods Pro. Äkta läder med trådlös laddning.", hasVariants: false },
-      { id: 12, name: "AirPods Max Fodral — Läder", price: 499, image: "https://i.imgur.com/lniCCs9.png", images: ["https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png"], category: "airpods", colors: ["Svart", "Brun"], desc: "Premium skyddsfodral för AirPods Max. Mjukt innerfoder i mocka.", hasVariants: false },
+      { id: 10, name: "AirPods Pro 3 Läder Skal — Läder", price: 349, image: "https://i.imgur.com/lniCCs9.png", images: ["https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png"], category: "airpods", colors: ["Svart", "Brun"], desc: "Äkta kohudsläder. Exakt passform. Laddningskompatibelt.", hasVariants: false },
+      { id: 11, name: "AirPods 4 Äkta Skal — Läder", price: 379, image: "https://i.imgur.com/lniCCs9.png", images: ["https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png", "https://i.imgur.com/lniCCs9.png"], category: "airpods", colors: ["Svart", "Brun"], desc: "Perfekt passform för AirPods Pro. Äkta läder med trådlös laddning.", hasVariants: false },
 
       // 5. Plånbok 
-      { id: 13, name: "Plånbok — Slim 11x8,5 cm", price: 599, image: "https://i.imgur.com/4u0f34j.jpeg", images: ["https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg"], category: "wallet", colors: ["Svart", "Brun"], desc: "Premium kohud. Slimmad & praktisk. Plats för 6 kort och sedlar.", hasVariants: false },
-      { id: 14, name: "Plånbok — RFID Skydd", price: 699, image: "https://i.imgur.com/4u0f34j.jpeg", images: ["https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg"], category: "wallet", colors: ["Svart", "Brun"], desc: "RFID-skydd. Äkta kohudsläder av högsta kvalitet. 8 kortfack.", hasVariants: false },
-      { id: 15, name: "Plånbok — Minimalist", price: 449, image: "https://i.imgur.com/4u0f34j.jpeg", images: ["https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg"], category: "wallet", colors: ["Svart", "Brun"], desc: "Tunn minimalistisk design. 4 kortfack och sedelficka. Äkta läder.", hasVariants: false },
+      { id: 15, name: "Plånbok — Äkta Läder", price: 449, image: "https://i.imgur.com/4u0f34j.jpeg", images: ["https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg", "https://i.imgur.com/4u0f34j.jpeg"], category: "wallet", colors: ["Svart", "Brun"], desc: "Tunn minimalistisk design. 4 kortfack och sedelficka. Äkta läder.", hasVariants: false },
 
       // 6. Adapter
-      { id: 17, name: "USB-C Adapter", price: 299, image: "https://i.imgur.com/qkokFty.png", images: ["https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png"], category: "adapter", colors: [], variants: ["35W", "65W"], variantLabel: "Välj effekt", hasVariants: true, desc: "Snabbladdning med kraftfull USB-C. Kompakt design. CE-godkänd." },
+      { id: 17, name: "Adapter Nano", price: 299, image: "https://i.imgur.com/qkokFty.png", images: ["https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png"], category: "adapter", colors: [], variants: ["35W", "65W"], variantLabel: "Välj effekt", hasVariants: true, desc: "Snabbladdning med kraftfull USB-C. Kompakt design. CE-godkänd." },
+      { id: 17, name: "Adapter Super", price: 299, image: "https://i.imgur.com/qkokFty.png", images: ["https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png", "https://i.imgur.com/qkokFty.png"], category: "adapter", colors: [], variants: ["35W", "65W"], variantLabel: "Välj effekt", hasVariants: true, desc: "Snabbladdning med kraftfull USB-C. Kompakt design. CE-godkänd." },
 
       // 7. Laddningskabel
       { id: 20, name: "USB-C Kabel", price: 149, image: "https://i.imgur.com/UaSnHt4.jpeg", images: ["https://i.imgur.com/UaSnHt4.jpeg", "https://i.imgur.com/UaSnHt4.jpeg", "https://i.imgur.com/UaSnHt4.jpeg"], category: "cable", colors: [], variants: ["1m", "2m"], variantLabel: "Välj längd", hasVariants: true, desc: "Flätad nylonkabel. Hållbar och stilren." },
